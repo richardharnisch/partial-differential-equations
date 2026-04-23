@@ -51,25 +51,18 @@ Fix $a \in (h_1, h_2)$ and let $\tau_a \in \mathbb{R}$ be the unique value with 
     \draw[dashed, gray] (-0.5, 2.2) -- (5.5, 2.2) node[right] {$x = h_2 (> 0)$};
     \draw[dashed, gray] (-0.5, 0.0) -- (5.5, 0.0) node[right] {$x = h_1 (< 0)$};
 
-    % Characteristic through (t1, a): centered so it passes through (1.5, 1.1)
-    % Use a shifted sigmoid-like curve: x(t) = h1 + (h2-h1)/(1 + exp(-k(t - shift)))
-    % h1=0, h2=2.2, through (t1,a) = (1.5, 1.1)
-    % 1.1 = 2.2/(1+exp(-k*0)) => exp(0)=1 => 1.1=1.1 check, shift=1.5
     \draw[blue, thick, domain=-0.2:5.2, samples=80]
     plot (\x, {2.2 / (1 + exp(-2*(\x - 1.5)))})
     node[right] {};
     \fill[blue] (1.5, 1.1) circle (1.5pt) node[above left] {\small$(t_1,a)$};
 
-    % Characteristic through (t2, a): shift = 3.0
     \draw[red, thick, domain=-0.2:5.2, samples=80]
     plot (\x, {2.2 / (1 + exp(-2*(\x - 3.0)))})
     node[right] {};
     \fill[red] (3.0, 1.1) circle (1.5pt) node[above left] {\small$(t_2,a)$};
 
-    % Dashed horizontal at a
     \draw[dotted] (-0.5, 1.1) node[left] {$x = a$} -- (5.5, 1.1);
 
-    % Axes
     \draw[->] (-0.3, -0.4) -- (-0.3, 2.8) node[above] {$x$};
     \draw[->] (-0.5, -0.3) -- (5.7, -0.3) node[right] {$t$};
   \end{tikzpicture}
