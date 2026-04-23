@@ -58,13 +58,13 @@ Fix $a \in (h_1, h_2)$ and let $\tau_a \in \mathbb{R}$ be the unique value with 
     \draw[blue, thick, domain=-0.2:5.2, samples=80]
     plot (\x, {2.2 / (1 + exp(-2*(\x - 1.5)))})
     node[right] {};
-    \fill[blue] (1.5, 1.1) circle (1.5pt) node[above right] {\small$(t_1,a)$};
+    \fill[blue] (1.5, 1.1) circle (1.5pt) node[above left] {\small$(t_1,a)$};
 
     % Characteristic through (t2, a): shift = 3.0
     \draw[red, thick, domain=-0.2:5.2, samples=80]
     plot (\x, {2.2 / (1 + exp(-2*(\x - 3.0)))})
     node[right] {};
-    \fill[red] (3.0, 1.1) circle (1.5pt) node[above right] {\small$(t_2,a)$};
+    \fill[red] (3.0, 1.1) circle (1.5pt) node[above left] {\small$(t_2,a)$};
 
     % Dashed horizontal at a
     \draw[dotted] (-0.5, 1.1) node[left] {$x = a$} -- (5.5, 1.1);
